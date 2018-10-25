@@ -13,13 +13,6 @@ from api.serializers import PeopleSerializer, PeopleModelSerializer
 
 
 class PeopleListApiView(APIView):
-    """
-    People listing actions. Must support the following method:
-
-        * GET: returns the whole list of People objects.
-
-        * POST: creates a new People object using submitted payload.
-    """
     def get(self, request):
         raw_people = People.objects.all()
         serial_people = PeopleSerializer(raw_people, many=True)
