@@ -12,7 +12,7 @@ router = DefaultRouter()
 # router.register('people', views.PeopleViewSet, base_name='people')
 
 # third step: working with ModelViewsets
-# router.register('people', views.PeopleModelViewSet, base_name='people')
+router.register('people', views.PeopleModelViewSet, base_name='people')
 
 urlpatterns = [
     # first step: working with raw APIViews
